@@ -4,10 +4,9 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.controller.MainPanelController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.controller.EmployeeController">
    <right>
       <VBox prefHeight="768.0" prefWidth="411.0" BorderPane.alignment="CENTER">
          <children>
@@ -80,7 +79,7 @@
                         <Insets right="15.0" />
                      </GridPane.margin>
                   </Button>
-                  <Button fx:id="btnKeluar" mnemonicParsing="false" prefHeight="47.0" prefWidth="118.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 10; -fx-border-radius: 10;" text="Keluar" GridPane.columnSpan="2" GridPane.rowIndex="2">
+                  <Button fx:id="btnKeluar" mnemonicParsing="false" onMouseClicked="#buttonExit" prefHeight="47.0" prefWidth="118.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 10; -fx-border-radius: 10;" text="Keluar" GridPane.columnSpan="2" GridPane.rowIndex="2">
                      <GridPane.margin>
                         <Insets left="15.0" top="75.0" />
                      </GridPane.margin>
@@ -95,20 +94,10 @@
                         <Insets left="60.0" top="75.0" />
                      </GridPane.margin>
                   </Button>
-                  <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#424242" height="121.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="138.0" GridPane.columnIndex="3" GridPane.rowIndex="2">
-                     <GridPane.margin>
-                        <Insets left="20.0" top="20.0" />
-                     </GridPane.margin>
-                  </Rectangle>
-                  <ImageView fx:id="imgLogo" fitHeight="298.0" fitWidth="411.0" pickOnBounds="true" preserveRatio="true" GridPane.columnSpan="4" GridPane.rowSpan="2" >
+                  <ImageView fitHeight="298.0" fitWidth="411.0" pickOnBounds="true" preserveRatio="true" GridPane.columnSpan="4" GridPane.rowSpan="2">
                      <image>
                         <Image url="@/image/kouveeLogo.png" />
                      </image>
-                  </ImageView>
-                  <ImageView fx:id="imgProfil" fitHeight="121.0" fitWidth="138.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="2">
-                     <GridPane.margin>
-                        <Insets left="20.0" top="20.0" />
-                     </GridPane.margin>
                   </ImageView>
                </children>
             </GridPane>
@@ -184,11 +173,11 @@
                                  <GridPane.margin>
                                     <Insets right="72.0" />
                                  </GridPane.margin></TextField>
-                              <Button fx:id="btnCari" mnemonicParsing="false" prefHeight="39.0" prefWidth="94.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 10; -fx-border-radius: 10;" text="Cari" GridPane.columnIndex="3" GridPane.columnSpan="2">
+                              <Button fx:id="btnCari" mnemonicParsing="false" onAction="#searchEmployee" prefHeight="39.0" prefWidth="94.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 10; -fx-border-radius: 10;" text="Cari" GridPane.columnIndex="3" GridPane.columnSpan="2">
                                  <GridPane.margin>
                                     <Insets left="15.0" />
                                  </GridPane.margin></Button>
-                              <Button fx:id="btnLihat" mnemonicParsing="false" prefHeight="39.0" prefWidth="144.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 10; -fx-border-radius: 10;" text="Lihat Semua" GridPane.columnIndex="3" GridPane.halignment="RIGHT">
+                              <Button fx:id="btnLihat" mnemonicParsing="false" onAction="#searchEmployees" prefHeight="39.0" prefWidth="144.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 10; -fx-border-radius: 10;" text="Lihat Semua" GridPane.columnIndex="3" GridPane.halignment="RIGHT">
                                  <GridPane.margin>
                                     <Insets right="72.0" />
                                  </GridPane.margin></Button>
@@ -196,15 +185,15 @@
                                  <GridPane.margin>
                                     <Insets left="60.0" />
                                  </GridPane.margin></Button>
-                              <Button fx:id="btnHapus" mnemonicParsing="false" prefHeight="40.0" prefWidth="158.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 10; -fx-border-radius: 10;" text="Hapus Data" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.valignment="TOP">
+                              <Button fx:id="btnHapus" mnemonicParsing="false" onAction="#deleteEmployee" prefHeight="40.0" prefWidth="158.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 10; -fx-border-radius: 10;" text="Hapus Data" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.valignment="TOP">
                                  <GridPane.margin>
                                     <Insets left="30.0" />
                                  </GridPane.margin></Button>
-                              <Button fx:id="btnPerbarui" mnemonicParsing="false" prefHeight="40.0" prefWidth="158.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 10; -fx-border-radius: 10;" text="Perbarui Data" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.valignment="TOP">
+                              <Button fx:id="btnPerbarui" mnemonicParsing="false" onAction="#updateEmployee" prefHeight="40.0" prefWidth="158.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 10; -fx-border-radius: 10;" text="Perbarui Data" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.valignment="TOP">
                                  <GridPane.margin>
                                     <Insets left="77.0" />
                                  </GridPane.margin></Button>
-                              <Button fx:id="btnTambah" mnemonicParsing="false" prefHeight="40.0" prefWidth="158.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 10; -fx-border-radius: 10;" text="Tambah Entri" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowIndex="5" GridPane.valignment="TOP">
+                              <Button fx:id="btnTambah" mnemonicParsing="false" onAction="#insertEmployee" prefHeight="40.0" prefWidth="158.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 10; -fx-border-radius: 10;" text="Tambah Entri" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowIndex="5" GridPane.valignment="TOP">
                                  <GridPane.margin>
                                     <Insets right="72.0" />
                                  </GridPane.margin></Button>

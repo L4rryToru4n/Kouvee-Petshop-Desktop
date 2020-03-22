@@ -48,6 +48,6 @@ public class Main extends Application {
 
     public void showMainPanelView(){
         FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(Main.class.getResource("MainPanel.fxml"));
+        loader.setLocation(Main.class.getResource("EmployeeView.fxml"));
     }
 }

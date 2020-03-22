@@ -1,7 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="baf6ca64-8172-47ab-83d2-70f280c4e256" name="Default Changelist" comment="" />
+    <list default="true" id="baf6ca64-8172-47ab-83d2-70f280c4e256" name="Default Changelist" comment="New code, using JavaFX with Gradle.">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/main/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/main/controller/EmployeeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/main/controller/EmployeeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/main/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/main/controller/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/main/controller/MainPanelController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/main/controller/MainPanelController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/main/MainPanel.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/controller/EmployeeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/controller/MainPanelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/controller/MainPanelController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/model/EmployeeDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/model/EmployeeDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/main/MainPanel.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/main/EmployeeView.fxml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,23 +46,7 @@
         </task>
         <projects_view>
           <tree_state>
-            <expand>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="KouveePetShop-Desktop" type="f1a62948:ProjectNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="KouveePetShop-Desktop" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="KouveePetShop-Desktop" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="application" type="c8890929:TasksNode$1" />
-              </path>
-            </expand>
+            <expand />
             <select />
           </tree_state>
         </projects_view>
@@ -68,6 +75,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java" />
     <property name="last_opened_file_path" value="$USER_HOME$/IdeaProjects/WelcomeApp" />
     <property name="project.structure.last.edited" value="Libraries" />
@@ -126,7 +134,26 @@
       <option name="presentableId" value="Default" />
       <updated>1584354824712</updated>
     </task>
+    <task id="LOCAL-00001" summary="New code, using JavaFX with Gradle.">
+      <created>1584617770722</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1584617770722</updated>
+    </task>
+    <task id="LOCAL-00002" summary="New code, using JavaFX with Gradle.">
+      <created>1584617868518</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1584617868518</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="New code, using JavaFX with Gradle." />
+    <option name="LAST_COMMIT_MESSAGE" value="New code, using JavaFX with Gradle." />
   </component>
   <component name="WindowStateProjectService">
     <state x="361" y="70" key="#Project_Structure" timestamp="1584355206894">
@@ -145,46 +172,50 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="183" y="273" width="403" height="290" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.824@0.0.1536.824" timestamp="1584355837717" />
-    <state x="424" y="6" key="CommitChangelistDialog2" timestamp="1584617770112">
+    <state x="424" y="6" key="CommitChangelistDialog2" timestamp="1584919985931">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="424" y="6" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1584617770112" />
+    <state x="424" y="6" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1584919985931" />
     <state x="434" y="112" key="FileChooserDialogImpl" timestamp="1584616901112">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="434" y="112" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1584616901112" />
-    <state width="1493" height="205" key="GridCell.Tab.0.bottom" timestamp="1584617600412">
+    <state width="1493" height="205" key="GridCell.Tab.0.bottom" timestamp="1584919965717">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="205" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1584617600412" />
-    <state width="1493" height="205" key="GridCell.Tab.0.center" timestamp="1584617600412">
+    <state width="1493" height="205" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1584919965717" />
+    <state width="1493" height="205" key="GridCell.Tab.0.center" timestamp="1584919965717">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="205" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1584617600412" />
-    <state width="1493" height="205" key="GridCell.Tab.0.left" timestamp="1584617600411">
+    <state width="1493" height="205" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1584919965717" />
+    <state width="1493" height="205" key="GridCell.Tab.0.left" timestamp="1584919965716">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="205" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1584617600411" />
-    <state width="1493" height="205" key="GridCell.Tab.0.right" timestamp="1584617600412">
+    <state width="1493" height="205" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1584919965716" />
+    <state width="1493" height="205" key="GridCell.Tab.0.right" timestamp="1584919965717">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="205" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1584617600412" />
-    <state x="249" y="0" key="SettingsEditor" timestamp="1584586251760">
+    <state width="1493" height="205" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1584919965717" />
+    <state x="349" y="155" key="IDE.errors.dialog" timestamp="1584617906919">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1584586251760" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1584617804071">
+    <state x="349" y="155" key="IDE.errors.dialog/0.0.1536.824@0.0.1536.824" timestamp="1584617906919" />
+    <state x="249" y="0" key="SettingsEditor" timestamp="1584911502205">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1584617804071" />
+    <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1584911502205" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1584617887750">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1584617887750" />
     <state x="199" y="196" key="chooseDestDirectoryDialog" timestamp="1584355837582">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="199" y="196" key="chooseDestDirectoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1584355837582" />
-    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1584616600694">
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1584911488366">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1584616600694" />
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1584911488366" />
     <state x="814" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1584591552121">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

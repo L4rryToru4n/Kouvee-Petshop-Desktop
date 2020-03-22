@@ -14,8 +14,6 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
 import main.util.DBUtil;
-import org.graalvm.compiler.phases.common.NodeCounterPhase;
-import sun.security.util.Password;
 
 import java.io.IOException;
 import java.net.URL;
@@ -72,7 +70,7 @@ public class LoginController implements Initializable {
                 stage.close();
 
                 try {
-                    Scene scene = new Scene(FXMLLoader.load(getClass().getResource("/main/MainPanel.fxml")));
+                    Scene scene = new Scene(FXMLLoader.load(getClass().getResource("/main/EmployeeView.fxml")));
                     stage.setScene(scene);
                     stage.show();
                 } catch (IOException e) {
@@ -88,7 +86,7 @@ public class LoginController implements Initializable {
 
         if (conn == null) {
             lblErrors.setTextFill(Color.TOMATO);
-            lblErrors.setText("Server Error : Check");
+            lblErrors.setText("Server Error : Restart the application");
         } else {
             lblErrors.setTextFill(Color.GREEN);
             lblErrors.setText("Server is Up : Good to go");
@@ -105,29 +103,42 @@ public class LoginController implements Initializable {
         String status = "Success";
         String password = txtPawd.getText();
         String username = txtUname.getText();
+        String role = "Admin";
 
         //Query
-        String query = "SELECT * FROM employees where username = '" + username + "'" + " and password = '" + password + "'";
+        String query = "SELECT * FROM employees WHERE role = ? and username = ? and password = ?;";
 
         if(username.isEmpty() || password.isEmpty()) {
-            lblErrors.setTextFill(Color.TOMATO);
-            lblErrors.setText("Empty credentials");
+            setLblError(Color.TOMATO, "Empty credentials");
             status = "Error";
         } else {
             try {
                 preparedStatement = conn.prepareStatement(query);
+                preparedStatement.setString(1, role);
+                preparedStatement.setString(2, username);
+                preparedStatement.setString(3, password);
                 resultSet = preparedStatement.executeQuery();
 
-                if(!resultSet.next())
+                if(resultSet.next() == false)
                 {
-                    lblErrors.setTextFill(Color.TOMATO);
-                    lblErrors.setText("Username & Password not match. Try again.");
+//                    do {
+//                        String data = resultSet.getString("role");
+//                        if(data != "Admin")
+//                        {
+//                            setLblError(Color.TOMATO, "Access Denied");
+//                            status = "Error";
+//                        }
+//                        else {
+//                            setLblError(Color.TOMATO, "Username or password not match ! Try Again");
+//                            status = "Error";
+//                        }
+//                    } while(resultSet.next());
+                    setLblError(Color.TOMATO, "Access Denied");
                     status = "Error";
                 }
                 else
                 {
-                    lblErrors.setTextFill(Color.GREEN);
-                    lblErrors.setText("Login Successful !");
+                    setLblError(Color.GREEN, "Login Successful");
                     status = "Success";
                 }
 
@@ -136,5 +147,11 @@ public class LoginController implements Initializable {
             }
         }
         return status;
+    }
+
+    private void setLblError(Color color, String text) {
+        lblErrors.setTextFill(color);
+        lblErrors.setText(text);
+        System.out.println(text);
     }
 }

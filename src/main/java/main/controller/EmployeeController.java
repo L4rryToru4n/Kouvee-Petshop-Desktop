@@ -8,6 +8,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
 import main.model.Employee;
 import main.model.EmployeeDAO;
 import javax.swing.text.html.ImageView;
@@ -100,6 +101,11 @@ public class EmployeeController {
 
     }
 
+    public void buttonExit(MouseEvent me) {
+        if(me.getSource() == btnKeluar)
+            System.exit(0);
+    }
+
     //Search an Employee
     @FXML
     private void searchEmployee(ActionEvent ae) throws ClassNotFoundException, SQLException {
@@ -119,7 +125,7 @@ public class EmployeeController {
     }
 
     @FXML
-    private void SearchEmployees(ActionEvent ae) throws ClassNotFoundException, SQLException {
+    private void searchEmployees(ActionEvent ae) throws ClassNotFoundException, SQLException {
 
         try {
             //Get all Employee information
@@ -177,7 +183,7 @@ public class EmployeeController {
     private void updateEmployee (ActionEvent ae) throws ClassNotFoundException, SQLException {
 
         try {
-            EmployeeDAO.updateEntries(empId.getText(), txtNama.getText(), txtTglLahir.getText(), txtAlamat.getText(),
+            EmployeeDAO.updateEntries(txtID.getText(), txtNama.getText(), txtTglLahir.getText(), txtAlamat.getText(),
                     txtTelp.getText(), txtRole.getText(), txtUname.getText(), txtPawd.getText());
 
         } catch (SQLException e) {

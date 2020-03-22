@@ -36,13 +36,14 @@ public class EmployeeDAO {
 
         if(rs.next()) {
             emp = new Employee();
-            emp.setName(rs.getString("Nama"));
-            emp.setDateBirth(rs.getDate("Tgl Lahir"));
-            emp.setPhoneNumber(rs.getString("No. Telp"));
-            emp.setAddress(rs.getString("Alamat"));
-            emp.setRole(rs.getString("Role"));
-            emp.setUsername(rs.getString("Username"));
-            emp.setPassword(rs.getString("Password"));
+            emp.setId(rs.getInt("id"));
+            emp.setName(rs.getString("name"));
+            emp.setDateBirth(rs.getDate("dateBirth"));
+            emp.setPhoneNumber(rs.getString("phoneNumber"));
+            emp.setAddress(rs.getString("address"));
+            emp.setRole(rs.getString("role"));
+            emp.setUsername(rs.getString("username"));
+            emp.setPassword(rs.getString("password"));
         }
 
         return emp;
@@ -81,13 +82,14 @@ public class EmployeeDAO {
         while(rs.next()) {
             Employee emp = new Employee();
             emp = new Employee();
-            emp.setName(rs.getString("Nama"));
-            emp.setDateBirth(rs.getDate("Tgl Lahir"));
-            emp.setPhoneNumber(rs.getString("No. Telp"));
-            emp.setAddress(rs.getString("Alamat"));
-            emp.setRole(rs.getString("Role"));
-            emp.setUsername(rs.getString("Username"));
-            emp.setPassword(rs.getString("Password"));
+            emp.setId(rs.getInt("id"));
+            emp.setName(rs.getString("name"));
+            emp.setDateBirth(rs.getDate("dateBirth"));
+            emp.setPhoneNumber(rs.getString("phoneNumber"));
+            emp.setAddress(rs.getString("address"));
+            emp.setRole(rs.getString("role"));
+            emp.setUsername(rs.getString("username"));
+            emp.setPassword(rs.getString("password"));
 
             //Add employee to the ObservableList
             empList.add(emp);
@@ -106,6 +108,12 @@ public class EmployeeDAO {
         String updateStmt =
                     "UPDATE employees " +
                     "SET name = '" + name + "' " +
+                    ", address = '" + address + "' " +
+                    ", dateBirth = '" + dateBirth + "' " +
+                    ", phoneNumber = '" + phoneNumber + "' " +
+                    ", role = '" + role + "' " +
+                    ", username = '" + username + "' " +
+                    ", password = '" + password + "' " +
                     "WHERE id = '" + Id + "';";
 
         try {
@@ -122,8 +130,8 @@ public class EmployeeDAO {
 
         //Declare a DELETE Statement
         String updateStmt =
-                        "DELETE FROM employees" +
-                        "WHERE id = '" + Id + "';";
+                        "DELETE FROM employees " +
+                        "WHERE id = " + Id + ";";
 
         try {
             DBUtil.dbExecuteUpdate(updateStmt);
