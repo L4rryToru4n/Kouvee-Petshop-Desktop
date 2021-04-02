@@ -25,7 +25,7 @@ public class DBUtil {
     private static Connection conn = null;
 
     //Connection URL
-    private static final String DATABASE_URL = "jdbc:mysql://localhost:3306/9509?useOldAliasMetadataBehavior=true&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
+    private static final String DATABASE_URL = "jdbc:mysql://localhost:3306/9254?useOldAliasMetadataBehavior=true&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
     private static final String USERNAME = "root";
     private static final String PASSWORD = "";
 

@@ -151,10 +151,6 @@ public class MainMenuController implements Initializable {
                 {
                     scene = new Scene(FXMLLoader.load(getClass().getResource("/main/ServiceDetailView.fxml")));
                 }
-                else if(me.getSource() == btnKelLaporan)
-                {
-                    scene = new Scene(FXMLLoader.load(getClass().getResource("/main/ReportEYearView.fxml")));
-                }
 
                 stage.setScene(scene);
                 stage.show();

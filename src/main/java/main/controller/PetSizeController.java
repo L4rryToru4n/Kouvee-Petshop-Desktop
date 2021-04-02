@@ -373,4 +373,23 @@ public class PetSizeController implements Initializable {
         info.setContentText(text);
         info.showAndWait();
     }
+
+    @FXML
+    private void selectedRow(MouseEvent me) {
+
+        if (me.getClickCount() > 1) {
+            editWithSelectedRow();
+        }
+    }
+
+    private void editWithSelectedRow() {
+
+
+        if (tableAll.getSelectionModel().getSelectedItem() != null) {
+            PetSize petSize = tableAll.getSelectionModel().getSelectedItem();
+
+            txtID.setText(Integer.toString(petSize.getId()));
+            txtUkuran.setText(petSize.getSize());
+        }
+    }
 }

@@ -4,9 +4,8 @@ import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
-import javafx.scene.image.Image;
 
-public class Product extends Logs{
+public class Product {
 
     private IntegerProperty Id;
     private StringProperty productName;
@@ -16,10 +15,6 @@ public class Product extends Logs{
     private IntegerProperty minimumQuantity;
     private String imagePath;
     private byte[] image;
-
-    public Image getImagePreview() {
-        return new Image(String.valueOf(image));
-    }
 
     public Product(String imagePath, byte[] image) {
 

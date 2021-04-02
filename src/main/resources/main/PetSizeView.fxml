@@ -60,7 +60,7 @@
                                     <Insets />
                                  </GridPane.margin>
                               </Button>
-                              <Button fx:id="btnUkuranKeluar" alignment="CENTER" mnemonicParsing="false" onMouseClicked="#handleButtonPetSize" prefHeight="50.0" prefWidth="150.0" style="-fx-background-radius: 10;" styleClass="mainButton" stylesheets="@../styleButton.css" text="Keluar" textFill="WHITE" GridPane.columnIndex="3">
+                              <Button fx:id="btnPetSizeKeluar" alignment="CENTER" mnemonicParsing="false" onMouseClicked="#handleButtonPetSize" prefHeight="50.0" prefWidth="150.0" style="-fx-background-radius: 10;" styleClass="mainButton" stylesheets="@../styleButton.css" text="Keluar" textFill="WHITE" GridPane.columnIndex="3">
                                  <font>
                                     <Font name="Franklin Gothic Medium" size="16.0" />
                                  </font>
